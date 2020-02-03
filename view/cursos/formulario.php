@@ -1,6 +1,6 @@
 <?php include  __DIR__ . '/../inicio-html.php'?>
 
-    <form action="">
+    <form action="/salvar-curso" method="post">
         <div class="form-group">
             <label for="descricao">Descricao</label>
             <input type="text" id="descricao" name="descricao" class="form-control">
