@@ -23,7 +23,7 @@ class Persistencia implements InterfaceControladorRequisicao
             'descricao',
             FILTER_SANITIZE_STRING
         );
-        
+
         $curso = new Curso();
         $curso->setDescricao($_POST['descricao']);
         $this->entityManager->persist($curso);
