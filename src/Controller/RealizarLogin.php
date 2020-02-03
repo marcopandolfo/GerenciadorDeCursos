@@ -4,11 +4,12 @@ namespace Alura\Cursos\Controller;
 
 use Alura\Cursos\Entity\Usuario;
 use Alura\Cursos\Infra\EntityManagerCreator;
+use Doctrine\Common\Persistence\ObjectRepository;
 
 class RealizarLogin implements InterfaceControladorRequisicao
 {
     /**
-     * @var \Doctrine\Common\Persistence\ObjectRepository
+     * @var ObjectRepository
      */
     private $repositorioDeUsuarios;
 
@@ -45,6 +46,10 @@ class RealizarLogin implements InterfaceControladorRequisicao
             echo "Email ou senha invalidos";
             return;
         }
+
+
+        $_SESSION['logado'] = true;
+
 
         header('Location: /listar-cursos');
     }
